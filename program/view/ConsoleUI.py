@@ -74,4 +74,4 @@ class ConsoleUI:
         self.presenter.sampling_by_date(our_date)
 
     def sort(self):
-        pass
+        self.presenter.sort()
