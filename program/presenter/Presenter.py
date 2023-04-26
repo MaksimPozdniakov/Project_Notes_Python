@@ -17,8 +17,8 @@ class Presenter:
     def search_note(self, search_word):
         self.model1.search_note(search_word)
 
-    def change_note(self, index, new_note):
-        self.model1.change_note(index, new_note)
+    def change_note(self, index, new_header, new_text):
+        self.model1.change_note(index, new_header, new_text)
 
     def sampling_by_date(self, our_date):
         self.model1.sampling_by_date(our_date)
@@ -30,4 +30,4 @@ class Presenter:
         self.model1.read()
 
     def sort(self):
-        self.model1.sort()
+        pass
