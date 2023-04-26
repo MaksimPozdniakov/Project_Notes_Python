@@ -54,3 +54,5 @@ class Model:
 
     def sort(self):
         print(self.notes[0][0])
+
+
