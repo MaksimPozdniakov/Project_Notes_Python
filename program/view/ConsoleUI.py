@@ -41,7 +41,7 @@ class ConsoleUI:
                 case 7:
                     self.sampling_by_date()
                 case 8:
-                    self.presenter.sort()
+                    self.sort()
                 case 9:
                     self.presenter.save()
                 case 10:
@@ -64,11 +64,14 @@ class ConsoleUI:
 
     def change_note(self):
         self.presenter.print1()
-        index = int(input("Какую заметку нужно изменить: "))
-        new_note = input("Введите новый текст: ")
-        self.presenter.change_note(index, new_note)
+        index = int(input("Какую запись нужно изменить: "))
+        new_header = input("Введите новый заголовок: ")
+        new_text = input("Введите новый текст: ")
+        self.presenter.change_note(index, new_header, new_text)
 
     def sampling_by_date(self):
         our_date = input("Введите интересующую дату: ")
         self.presenter.sampling_by_date(our_date)
 
+    def sort(self):
+        pass

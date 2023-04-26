@@ -10,11 +10,11 @@ class Model:
         self.notes = []
 
     def add_note(self, header, text):
-        note = Note(header, text, datetime.today().strftime('%d.%m.%Y %H:%M'))
+        note = Note(header, text, datetime.today().strftime('%d.%m.%Y %H:%M'),
+                    datetime.today().strftime('%d.%m.%Y %H:%M'))
         self.notes.append(note)
 
     def print(self):
-        # print(self.notes)
         for i in self.notes:
             print(i)
 
@@ -31,8 +31,16 @@ class Model:
             if search_word in el:
                 print(el)
 
-    def change_note(self, index, new_note):
-        self.notes[index-1] = new_note
+    def change_note(self, index, new_header, new_text):
+        my_list = self.notes[index-1].split(";")
+        my_list[0] = new_header
+        my_list[1] = new_text
+        my_list[3] = datetime.today().strftime('%d.%m.%Y %H:%M')
+        my_str = ""
+        for item in my_list:
+            my_str += item + ";"
+        my_str = my_str[:-1]
+        self.notes[index-1] = my_str
 
     def sampling_by_date(self, our_date):
         new_list = []
@@ -53,6 +61,10 @@ class Model:
         self.notes = rrr.read()
 
     def sort(self):
-        print(self.notes[0][0])
+        pass
+
+
+
+
 
 

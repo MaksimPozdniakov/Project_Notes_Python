@@ -18,9 +18,10 @@ class Writing:
             new_list.append(str_item)
             for el in new_list:
                 id_note = "Запись №" + str(number)
-                data[id_note] = {"Заголовок": el[0], "Содержание записи": el[1], "Дата создания": el[2]}
+                data[id_note] = {"Заголовок": el[0], "Содержание записи": el[1], "Дата создания": el[2],
+                                 "Дата изменения": el[3]}
                 number += 1
 
             with io.open(self.path, "w", encoding='UTF-8') as file:
-                json.dump(data, file, ensure_ascii=False, indent=3)
+                json.dump(data, file, ensure_ascii=False, indent=4)
 
