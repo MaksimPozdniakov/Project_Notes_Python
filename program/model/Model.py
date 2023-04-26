@@ -15,8 +15,15 @@ class Model:
         self.notes.append(note)
 
     def print(self):
-        for i in self.notes:
-            print(i)
+        # for i in self.notes:
+        #     print(i)
+        for item in self.notes:
+            new_list = []
+            str_item = str(item).split(";")
+            print(type(str_item))
+
+            # new_list.append(str_item)
+            # print(new_list)
 
     def del_note(self, index):
         self.notes.pop(index-1)
