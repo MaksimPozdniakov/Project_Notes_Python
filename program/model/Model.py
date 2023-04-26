@@ -15,15 +15,10 @@ class Model:
         self.notes.append(note)
 
     def print(self):
-        # for i in self.notes:
-        #     print(i)
         for item in self.notes:
-            new_list = []
-            str_item = str(item).split(";")
-            print(type(str_item))
-
-            # new_list.append(str_item)
-            # print(new_list)
+            new_list = str(item).split(";")
+            print('{} | {} | Дата создания: {} | Дата редактирования: {}'.format(new_list[0], new_list[1],
+                                                                                 new_list[2], new_list[3]))
 
     def del_note(self, index):
         self.notes.pop(index-1)
@@ -68,9 +63,23 @@ class Model:
         self.notes = rrr.read()
 
     def sort(self):
-        pass
+        data = {}
+        data_list = []
+        # [{'quantity': (200,), 'operation_type': ('Sell',), 'date': '2021-06-05 22:10:29'},
+        #  {'quantity': (200,), 'operation_type': ('Sell',), 'date': '2021-06-05 22:10:29'}]
 
+        for item in self.notes:
+            new_list = []
+            str_item = str(item).split(";")
+            new_list.append(str_item)
 
+            data = {"Заголовок": str_item[0], "Содержание записи": str_item[1], "Дата создания": str_item[2],
+                             "Дата изменения": str_item[3]}
+            data_list.append(data)
+
+        stocks = sorted(data_list, key=lambda x: datetime.strptime(x["Дата создания"], '%d.%m.%Y %H:%M'), reverse=False)
+        for i in stocks:
+            print(i)
 
 
 

@@ -30,4 +30,4 @@ class Presenter:
         self.model1.read()
 
     def sort(self):
-        pass
+        self.model1.sort()
