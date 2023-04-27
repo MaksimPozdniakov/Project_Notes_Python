@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0ca760-e6e5-4a72-8fbd-e3a578c3868c" name="Changes" comment="the 8th commit">
+    <list default="true" id="4a0ca760-e6e5-4a72-8fbd-e3a578c3868c" name="Changes" comment="the 9th commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/program/db/Notebook.json" beforeDir="false" afterPath="$PROJECT_DIR$/program/db/Notebook.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/program/model/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/program/model/Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/program/model/Writing.py" beforeDir="false" afterPath="$PROJECT_DIR$/program/model/Writing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/program/presenter/Presenter.py" beforeDir="false" afterPath="$PROJECT_DIR$/program/presenter/Presenter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/program/view/ConsoleUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/program/view/ConsoleUI.py" afterDir="false" />
     </list>
@@ -37,14 +37,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "new__branch",
-    "last_opened_file_path": "C:/Users/PMPav/Desktop/Second block of study/Seminars/Seminars_HWs_Lectures_Python"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;new__branch&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PMPav/Desktop/Second block of study/Seminars/Seminars_HWs_Lectures_Python&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.Main">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Project_Notes_Python" />
@@ -125,13 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682521822728</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="the 9th commit">
+      <created>1682527977963</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682527977963</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="the sixth commit" />
     <MESSAGE value="the seventh commit" />
     <MESSAGE value="the 8th commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="the 8th commit" />
+    <MESSAGE value="the 9th commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="the 9th commit" />
   </component>
 </project>

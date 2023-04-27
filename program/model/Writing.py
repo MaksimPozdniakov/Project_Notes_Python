@@ -13,9 +13,9 @@ class Writing:
         number = 1
 
         for item in self.notes:
-            new_list = []
+            # new_list = []
             str_item = str(item).split(";")
-            new_list.append(str_item)
+            # new_list.append(str_item)
             id_note = "Запись №" + str(number)
             data[id_note] = {"Заголовок": str_item[0], "Содержание записи": str_item[1], "Дата создания": str_item[2],
                              "Дата изменения": str_item[3]}
