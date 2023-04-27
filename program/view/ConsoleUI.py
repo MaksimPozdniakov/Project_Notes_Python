@@ -17,9 +17,8 @@ class ConsoleUI:
             5. Найти запись
             6. Изменить запись
             7. Выборка по дате
-            8. Сортировка 
-            9. Сохранить 
-            10. Закрыть программу
+            8. Сохранить 
+            9. Закрыть программу
             """
             print(menu_str)
 
@@ -30,6 +29,7 @@ class ConsoleUI:
                     self.presenter.read()
                 case 2:
                     self.presenter.print1()
+                    self.sort()
                 case 3:
                     self.add()
                 case 4:
@@ -38,13 +38,12 @@ class ConsoleUI:
                     self.search_note()
                 case 6:
                     self.change_note()
+                    print('Запись изменена.')
                 case 7:
                     self.sampling_by_date()
                 case 8:
-                    self.sort()
-                case 9:
                     self.presenter.save()
-                case 10:
+                case 9:
                     print("Блокнот закрыт")
                     exit()
 
@@ -74,4 +73,13 @@ class ConsoleUI:
         self.presenter.sampling_by_date(our_date)
 
     def sort(self):
-        self.presenter.sort()
+        user_answer = input("Вы хотите отсортировать записи? (Да\Нет) ")
+        if user_answer == "Да":
+            print("Если нужно отсортировать по дате создания нажмите 1 \n"
+                  "Если нужно отсортировать по дате изменения нажмите 2 \n")
+            user_answer2 = int(input("Сделайте выбор: "))
+            if user_answer2 == 1:
+                self.presenter.sort(1)
+            else:
+                self.presenter.sort(2)
+

@@ -15,10 +15,22 @@ class Model:
         self.notes.append(note)
 
     def print(self):
+        # for item in self.notes:
+        #     new_list = str(item).split(";")
+        #     print('{} | {} | Дата создания: {} | Дата редактирования: {}'.format(new_list[0], new_list[1],
+        #                                                                          new_list[2], new_list[3]))
+
+        data_list = []
         for item in self.notes:
-            new_list = str(item).split(";")
-            print('{} | {} | Дата создания: {} | Дата редактирования: {}'.format(new_list[0], new_list[1],
-                                                                                 new_list[2], new_list[3]))
+            list_item = str(item).split(";")
+            data = {"Заголовок": list_item[0], "Содержание записи": list_item[1], "Дата создания": list_item[2],
+                    "Дата изменения": list_item[3]}
+            data_list.append(data)
+        number = 1
+        for el in data_list:
+            list_el = str(el).replace('{', '').replace('}', '').replace("'","")
+            print(str(number) + ') ' + list_el)
+            number += 1
 
     def del_note(self, index):
         self.notes.pop(index-1)
@@ -62,24 +74,28 @@ class Model:
         rrr = Reading("C:/Users/PMPav/Desktop/Projects/Project_Notes_Python/program/db/Notebook.json", self.notes)
         self.notes = rrr.read()
 
-    def sort(self):
-        data = {}
+    def sort(self, user_choice):
         data_list = []
-        # [{'quantity': (200,), 'operation_type': ('Sell',), 'date': '2021-06-05 22:10:29'},
-        #  {'quantity': (200,), 'operation_type': ('Sell',), 'date': '2021-06-05 22:10:29'}]
 
         for item in self.notes:
-            new_list = []
-            str_item = str(item).split(";")
-            new_list.append(str_item)
+            list_item = str(item).split(";")
 
-            data = {"Заголовок": str_item[0], "Содержание записи": str_item[1], "Дата создания": str_item[2],
-                             "Дата изменения": str_item[3]}
+            data = {"Заголовок": list_item[0], "Содержание записи": list_item[1], "Дата создания": list_item[2],
+                             "Дата изменения": list_item[3]}
             data_list.append(data)
 
-        stocks = sorted(data_list, key=lambda x: datetime.strptime(x["Дата создания"], '%d.%m.%Y %H:%M'), reverse=False)
+        if user_choice == 1:
+            stocks = sorted(data_list, key=lambda x: datetime.strptime(x["Дата создания"], '%d.%m.%Y %H:%M'),
+                            reverse=False)
+        else:
+            stocks = sorted(data_list, key=lambda x: datetime.strptime(x["Дата изменения"], '%d.%m.%Y %H:%M'),
+                            reverse=False)
+
+        number = 1
         for i in stocks:
-            print(i)
+            list_i = str(i).replace('{', '').replace('}', '').replace("'","")
+            print(str(number) + ') ' + list_i)
+            number += 1
 
 
 

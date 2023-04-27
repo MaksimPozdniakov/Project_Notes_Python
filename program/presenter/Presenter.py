@@ -29,5 +29,5 @@ class Presenter:
     def read(self):
         self.model1.read()
 
-    def sort(self):
-        self.model1.sort()
+    def sort(self, user_choice):
+        self.model1.sort(user_choice)
