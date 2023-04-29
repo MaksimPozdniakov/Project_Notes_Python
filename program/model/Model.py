@@ -15,10 +15,6 @@ class Model:
         self.notes.append(note)
 
     def print(self):
-        # for item in self.notes:
-        #     new_list = str(item).split(";")
-        #     print('{} | {} | Дата создания: {} | Дата редактирования: {}'.format(new_list[0], new_list[1],
-        #                                                                          new_list[2], new_list[3]))
 
         data_list = []
         for item in self.notes:
@@ -28,7 +24,7 @@ class Model:
             data_list.append(data)
         number = 1
         for el in data_list:
-            list_el = str(el).replace('{', '').replace('}', '').replace("'","")
+            list_el = str(el).replace('{', '').replace('}', '').replace("'", "")
             print(str(number) + ') ' + list_el)
             number += 1
 
@@ -41,9 +37,19 @@ class Model:
             str_el = str(el)
             new_list.append(str_el)
 
-        for el in new_list:
-            if search_word in el:
-                print(el)
+        data_list = []
+        for item in new_list:
+            if search_word in item:
+                list_el = str(item).split(';')
+                data = {"Заголовок": list_el[0], "Содержание записи": list_el[1], "Дата создания": list_el[2],
+                        "Дата изменения": list_el[3]}
+                data_list.append(data)
+
+        number = 1
+        for i in data_list:
+            list_el = str(i).replace('{', '').replace('}', '').replace("'", "")
+            print(str(number) + ') ' + list_el)
+            number += 1
 
     def change_note(self, index, new_header, new_text):
         my_list = self.notes[index-1].split(";")
@@ -62,9 +68,19 @@ class Model:
             str_el = str(el)
             new_list.append(str_el)
 
-        for el in new_list:
-            if our_date in el:
-                print(el)
+        data_list = []
+        for item in new_list:
+            if our_date in item:
+                list_el = str(item).split(';')
+                data = {"Заголовок": list_el[0], "Содержание записи": list_el[1], "Дата создания": list_el[2],
+                        "Дата изменения": list_el[3]}
+                data_list.append(data)
+
+        number = 1
+        for i in data_list:
+            list_el = str(i).replace('{', '').replace('}', '').replace("'", "")
+            print(str(number) + ') ' + list_el)
+            number += 1
 
     def save(self):
         sss = Writing("C:/Users/PMPav/Desktop/Projects/Project_Notes_Python/program/db/Notebook.json", self.notes)

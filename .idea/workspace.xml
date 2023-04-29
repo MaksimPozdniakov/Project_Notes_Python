@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a0ca760-e6e5-4a72-8fbd-e3a578c3868c" name="Changes" comment="the 10th commit">
+    <list default="true" id="4a0ca760-e6e5-4a72-8fbd-e3a578c3868c" name="Changes" comment="the 11th commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/program/db/Notebook.json" beforeDir="false" afterPath="$PROJECT_DIR$/program/db/Notebook.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/program/model/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/program/model/Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/program/model/Reading.py" beforeDir="false" afterPath="$PROJECT_DIR$/program/model/Reading.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/program/view/ConsoleUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/program/view/ConsoleUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682586250723</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="the 11th commit">
+      <created>1682589955591</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682589955591</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -145,6 +156,7 @@
     <MESSAGE value="the 8th commit" />
     <MESSAGE value="the 9th commit" />
     <MESSAGE value="the 10th commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="the 10th commit" />
+    <MESSAGE value="the 11th commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="the 11th commit" />
   </component>
 </project>

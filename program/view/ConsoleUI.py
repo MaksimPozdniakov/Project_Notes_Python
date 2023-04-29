@@ -39,6 +39,7 @@ class ConsoleUI:
                     print('Запись добавлена.')
                 case 4:
                     self.del_note()
+                    print('Запись удалена.')
                 case 5:
                     self.search_note()
                 case 6:
@@ -91,5 +92,7 @@ class ConsoleUI:
                 else:
                     self.presenter.sort(2)
                     break
+            elif user_answer == 'НЕТ' or user_answer == 'YTN':
+                break
             else:
                 print('Что-то вы не то ввели.')
