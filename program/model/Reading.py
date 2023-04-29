@@ -14,11 +14,10 @@ class Reading:
             my_string = ""
 
             for key, value in data.items():
-
                 for key2, value2 in value.items():
                     my_string += value2 + ";"
-                my_string = my_string[:-1] + ','
+                my_string = my_string[:-1] + '/'
             my_string = my_string[:-1]
 
-            self.notes = my_string.split(',')
+            self.notes = my_string.split('/')
         return self.notes
